@@ -1,4 +1,4 @@
-const push = (arr, x) => {
+function push(arr, x) {
   return arr.concat([x]);
 }
 
@@ -10,7 +10,7 @@ export const pushInRow = (arr, c, i = 0) => { // magic!!
   return [push(arr[i], c)];
 }
 
-const pushInRowWithSpecialCase = (arr, c, i = 0) => {
+function pushInRowWithSpecialCase(arr, c, i = 0) {
   if (!(c === 'I' || c === 'J'))
     return pushInRow(arr, c);
 
@@ -19,7 +19,7 @@ const pushInRowWithSpecialCase = (arr, c, i = 0) => {
   return arr;
 }
 
-function removeAndPush(key) {
+function removeDuplicates(key) {
   const removedDuplicates = [...new Set(key.split(''))];
   return removedDuplicates.reduce((prev, curr) => {
     return pushInRowWithSpecialCase(prev, curr)
@@ -40,9 +40,12 @@ function hasInArray(arr, c) {
   return false;
 }
 
+export const preprocessKey = key => {
+  return removeDuplicates(key.toUpperCase());
+};
+
 const generateMatrix = (key) => {
-  key = key.toUpperCase();
-  let arr = removeAndPush(key);
+  let arr = preprocessKey(key);
   fromAToZ(c => {
     if (!hasInArray(arr, c)) {
       arr = pushInRowWithSpecialCase(arr, c);
