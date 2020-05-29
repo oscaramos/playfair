@@ -10,10 +10,19 @@ export const pushInRow = (arr, c, i = 0) => { // magic!!
   return [push(arr[i], c)];
 }
 
+const pushInRowWithSpecialCase = (arr, c, i = 0) => {
+  if (!(c === 'I' || c === 'J'))
+    return pushInRow(arr, c);
+
+  if (!hasInArray(arr, c))
+    return pushInRow(arr, 'I/J');
+  return arr;
+}
+
 function removeAndPush(key) {
   const removedDuplicates = [...new Set(key.split(''))];
   return removedDuplicates.reduce((prev, curr) => {
-    return pushInRow(prev, curr)
+    return pushInRowWithSpecialCase(prev, curr)
   }, []);
 }
 
@@ -24,8 +33,10 @@ function fromAToZ(fn) {
 
 function hasInArray(arr, c) {
   for (let i = 0; i < arr.length; i++)
-    if (arr[i].includes(c))
-      return true;
+    for(let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j].includes(c))
+        return true;
+    }
   return false;
 }
 
@@ -34,11 +45,7 @@ const generateMatrix = (key) => {
   let arr = removeAndPush(key);
   fromAToZ(c => {
     if (!hasInArray(arr, c)) {
-      if (c === 'I' || c === 'J') {
-        if (c === 'I')
-          arr = pushInRow(arr, 'I/J');
-      } else
-        arr = pushInRow(arr, c);
+      arr = pushInRowWithSpecialCase(arr, c);
     }
   });
   return arr;

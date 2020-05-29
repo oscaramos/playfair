@@ -48,12 +48,14 @@ function App() {
                    margin='normal'
                    fullWidth
                    variant='outlined'
+                   value={key}
         />
         <TextField label="Text"
                    onChange={(e) => setText(e.target.value)}
                    margin='normal'
                    fullWidth
                    variant='outlined'
+                   value={text}
         />
         <TableContainer>
           <Table>
