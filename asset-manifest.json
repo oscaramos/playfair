@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/playfair/static/js/main.d572692c.chunk.js",
-    "main.js.map": "/playfair/static/js/main.d572692c.chunk.js.map",
+    "main.js": "/playfair/static/js/main.212f47b1.chunk.js",
+    "main.js.map": "/playfair/static/js/main.212f47b1.chunk.js.map",
     "runtime-main.js": "/playfair/static/js/runtime-main.ecf03568.js",
     "runtime-main.js.map": "/playfair/static/js/runtime-main.ecf03568.js.map",
     "static/js/2.bd704fc9.chunk.js": "/playfair/static/js/2.bd704fc9.chunk.js",
     "static/js/2.bd704fc9.chunk.js.map": "/playfair/static/js/2.bd704fc9.chunk.js.map",
     "index.html": "/playfair/index.html",
-    "precache-manifest.c23f1cc4fe759de5b815eca4318a7215.js": "/playfair/precache-manifest.c23f1cc4fe759de5b815eca4318a7215.js",
+    "precache-manifest.5ec17caaf4a47ba8705d984196aa4bb8.js": "/playfair/precache-manifest.5ec17caaf4a47ba8705d984196aa4bb8.js",
     "service-worker.js": "/playfair/service-worker.js",
     "static/js/2.bd704fc9.chunk.js.LICENSE.txt": "/playfair/static/js/2.bd704fc9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ecf03568.js",
     "static/js/2.bd704fc9.chunk.js",
-    "static/js/main.d572692c.chunk.js"
+    "static/js/main.212f47b1.chunk.js"
   ]
 }
