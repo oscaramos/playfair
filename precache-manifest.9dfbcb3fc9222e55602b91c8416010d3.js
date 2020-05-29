@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7192130d6a0918eb989eeb26a6ee9271",
+    "revision": "8f65906d4707f44dd4eb546fdfd9e371",
     "url": "/playfair/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/playfair/static/js/2.7140bb29.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "536b750e207261a87366",
-    "url": "/playfair/static/js/main.06b49d1a.chunk.js"
+    "revision": "e363fe44e0555c10a822",
+    "url": "/playfair/static/js/main.70e1d4a4.chunk.js"
   },
   {
     "revision": "bb46ddf1f6bca1983228",
