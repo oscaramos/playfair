@@ -3,6 +3,9 @@ function getIndexes(c, matrix) {
     for (let j = 0; j < matrix[i].length; j++)
       if (matrix[i][j].includes(c)) // includes can detect 'I/J' case!
         return [i, j];
+  console.log("aa");
+  console.log(c);
+  console.log(matrix);
   return null; // this should not happen
 }
 
@@ -47,7 +50,12 @@ export function resolveCase3(cc, matrix) {
 
 const preprocessText = text => {
   text = text.toUpperCase().replace(/ /g, ''); // remove whitespaces
-  return text.length % 2 === 1 ? text + 'X' : text;
+  text = text.length % 2 === 1 ? text + 'X' : text; // add X when is odd
+  let ans = [];
+  for(let i=0; i<text.length; i+=2)
+    ans = ans.concat(text[i]+text[i+1]);
+  return ans;
+
 };
 
 function resolveCase(cc, matrix) {
@@ -59,11 +67,8 @@ function resolveCase(cc, matrix) {
 }
 
 const cipher = (text, matrix) => {
-  return preprocessText(text).split('').reduce((prev, curr, idx) => {
-    if (idx % 2 === 0)
-      return prev + resolveCase(text[idx] + text[idx + 1], matrix);
-    else
-      return prev;
+  return preprocessText(text).reduce((prev, curr) => {
+    return prev + resolveCase(curr, matrix);
   }, '')
 }
 

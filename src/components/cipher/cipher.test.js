@@ -2,9 +2,10 @@ import cipher, { resolveCase1, resolveCase2, resolveCase3 } from "./cipher";
 
 const originalText = 'quien te quita lo bailado';
 const matrix = [['B', 'A', 'C', 'H', 'T'], ['D', 'E', 'F', 'G', 'I/J'], ['K', 'L', 'M', 'N', 'O'], ['P', 'Q', 'R', 'S', 'U'], ['V', 'W', 'X', 'Y', 'Z']];
-const criptedText = cipher(originalText, matrix);
+
 
 it('Cipher Video test', () => {
+  const criptedText = cipher(originalText, matrix);
   expect(criptedText).toBe('RPDFOHLWZOBCMKACEOBEMZ');
 })
 
