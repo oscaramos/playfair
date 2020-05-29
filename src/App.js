@@ -36,7 +36,7 @@ const countFromPreprocessedKey = (preKey) => {
 function App() {
   const classes = useStyles();
 
-  const [key, setKey] = useState('bachata');
+  const [key, setKey] = useState('bachatar');
   const [text, setText] = useState('quien te quita lo bailado');
 
   const cnt = countFromPreprocessedKey(preprocessKey(key));
